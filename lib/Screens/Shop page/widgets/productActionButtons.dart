@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:p9/Screens/Profile/profile.dart';
+import 'package:p9/Screens/place_order/place_order.dart';
 
 import '../../main_screen.dart';
 
@@ -8,10 +8,14 @@ Widget productActionButtons(BuildContext context) {
     padding: const EdgeInsets.all(8.0),
     child: Row(
       children: [
-        actionBar(Icons.shopping_cart_outlined, "Go to cart",
-            [Color(0xFF3F92FF), Color(0xFF0B3689)], context,MainScreen(index: 2)),
+        actionBar(
+            Icons.shopping_cart_outlined,
+            "Go to cart",
+            [Color(0xFF3F92FF), Color(0xFF0B3689)],
+            context,
+            MainScreen(index: 2)),
         actionBar(Icons.ads_click, "Buy Now",
-            [Color(0xFF71F9A9), Color(0xFF31B769)], context,Profile(onNavigate: (onNavigate){})), //////////////////
+            [Color(0xFF71F9A9), Color(0xFF31B769)], context, PlaceOrder()),
       ],
     ),
   );
